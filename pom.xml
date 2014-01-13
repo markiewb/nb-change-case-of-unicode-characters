@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.markiewb.netbeans.plugins</groupId>
     <artifactId>changecaseofunicodecharacters</artifactId>
-    <version>1.1</version>
+    <version>1.2-SNAPSHOT</version>
     <name>Change case of unicode characters</name>
     <organization>
         <name>Benno Markiewicz (benno.markiewicz@googlemail.com)</name>
