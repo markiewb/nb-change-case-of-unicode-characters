@@ -10,17 +10,18 @@
     </organization>
     <url>https://github.com/markiewb/nb-change-case-of-unicode-characters</url>
     <description>&lt;p&gt;
-        Converts unicode escapes in property files to upper case or lower case (&lt;tt&gt;\uCAFE&lt;/tt&gt; or &lt;tt&gt;\ucafe&lt;/tt&gt;).
-        It adds two actions to the context menu of the editor of property files.
+        Converts unicode escapes in text files to upper case or lower case (&lt;tt&gt;\uCAFE&lt;/tt&gt; or &lt;tt&gt;\ucafe&lt;/tt&gt;).
+        It adds two actions to the context menu of every text editor (like *.properties, *.java, *.xml).
 &lt;/p&gt;
 
-&lt;p&gt;
-        Note: It currently supports only *.properties.
-&lt;/p&gt;
-
+&lt;h2&gt;Updates in 1.2:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href="https://github.com/markiewb/nb-change-case-of-unicode-characters/issues/2"&gt;Feature&lt;/a&gt;]: Provide the actions also for other mimetypes&lt;/li&gt;
+&lt;li&gt;[&lt;a href="https://github.com/markiewb/nb-change-case-of-unicode-characters/issues/3"&gt;Bugfix&lt;/a&gt;]: FileLockedException when applied to document with unsaved changes&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;Updates in 1.1:&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;[&lt;a href="https://github.com/markiewb/nb-change-case-of-unicode-characters/issues/1"&gt;Issue 1&lt;/a&gt;]:Convert to maven based module&lt;/li&gt;
+&lt;li&gt;[&lt;a href="https://github.com/markiewb/nb-change-case-of-unicode-characters/issues/1"&gt;Issue 1&lt;/a&gt;]: Convert to maven based module&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Provide defects, request for enhancements and feedback at &lt;a href="https://github.com/markiewb/nb-change-case-of-unicode-characters/issues"&gt;https://github.com/markiewb/nb-change-case-of-unicode-characters/issues&lt;/a&gt;&lt;/p&gt;
