@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.markiewb.netbeans.plugins</groupId>
     <artifactId>changecaseofunicodecharacters</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
     <name>Change case of unicode characters</name>
     <organization>
         <name>Benno Markiewicz (benno.markiewicz@googlemail.com)</name>
@@ -42,6 +42,7 @@
                     <author>Benno Markiewicz (benno.markiewicz@googlemail.com)</author>
                     <homePageUrl>https://github.com/markiewb/nb-change-case-of-unicode-characters</homePageUrl>
                     <keystore>nbproject/private/keystore</keystore>
+                    <keystorealias>myself</keystorealias>
                     <licenseName>Apache 2.0</licenseName>
                 </configuration>
             </plugin>            
