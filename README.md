@@ -1,6 +1,7 @@
 nb-change-case-of-unicode-characters
 ====================================
 
-NetBeans plugin which converts unicode escapes in property files to upper case or lower case
+Converts unicode escapes in text files to upper case or lower case (<tt>\uCAFE</tt> or <tt>\ucafe</tt>).
+It adds two actions to the context menu of every text editor (like *.properties, *.java, *.xml).
 
 See http://plugins.netbeans.org/plugin/51298/?show=true
