@@ -18,6 +18,8 @@ package de.markiewb.netbeans.plugins.changecaseofunicodecharacters;
 import de.markiewb.netbeans.plugins.changecaseofunicodecharacters.Converter.ConvertMode;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import org.openide.DialogDisplayer;
+import org.openide.NotifyDescriptor;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
 import org.openide.awt.ActionReferences;
@@ -34,9 +36,9 @@ import org.openide.util.NbBundle.Messages;
 )
 @ActionReferences(
         {
-            @ActionReference(path = "Editors/text/x-properties/Popup", position = 0)
+            @ActionReference(path = "Editors/Popup", position = 50010)
         })
-@Messages("CTL_ConvertToUpperCaseUnicodeAction=Convert unicode chars to uppercase")
+@Messages({"CTL_ConvertToUpperCaseUnicodeAction=Convert unicode chars to uppercase","ERROR_UnsavedChanges=Your document has unsaved changes, please save it first and then start the conversion."})
 public final class ConvertToUpperCaseUnicodeAction implements ActionListener {
 
     private final DataObject context;
@@ -47,6 +49,10 @@ public final class ConvertToUpperCaseUnicodeAction implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ev) {
+        if (context.getPrimaryFile().isLocked()) {
+            DialogDisplayer.getDefault().notify(new NotifyDescriptor.Message(Bundle.ERROR_UnsavedChanges(), NotifyDescriptor.WARNING_MESSAGE));
+            return;
+        }
         new Converter().convertUnicodeCharacters(context.getPrimaryFile(), ConvertMode.UPPERCASE);
     }
 }

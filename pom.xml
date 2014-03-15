@@ -126,9 +126,15 @@
             <artifactId>org-netbeans-api-annotations-common</artifactId>
             <version>${netbeans.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-dialogs</artifactId>
+            <version>${netbeans.version}</version>
+        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <netbeans.version>RELEASE70</netbeans.version>
+        <!--<netbeans.run.params>-J-noverify -J-Xbootclasspath/p:C:\Users\markiewb\AppData\Local\Temp\rebelboot.jar -J-javaagent:C:\Users\markiewb\AppData\Roaming\NetBeans\8.0\jrebel\jrebel.jar -J-Drebel.log=true</netbeans.run.params>-->
     </properties>
 </project>

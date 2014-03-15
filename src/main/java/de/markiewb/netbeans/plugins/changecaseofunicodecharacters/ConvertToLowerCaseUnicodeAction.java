@@ -18,6 +18,8 @@ package de.markiewb.netbeans.plugins.changecaseofunicodecharacters;
 import de.markiewb.netbeans.plugins.changecaseofunicodecharacters.Converter.ConvertMode;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import org.openide.DialogDisplayer;
+import org.openide.NotifyDescriptor;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
 import org.openide.awt.ActionReferences;
@@ -34,7 +36,7 @@ import org.openide.util.NbBundle.Messages;
 )
 @ActionReferences(
         {
-            @ActionReference(path = "Editors/text/x-properties/Popup", position = 0)
+            @ActionReference(path = "Editors/Popup", position = 50000)
         })
 @Messages("CTL_ConvertToLowerCaseUnicodeAction=Convert unicode chars to lowercase")
 public final class ConvertToLowerCaseUnicodeAction implements ActionListener {
@@ -47,6 +49,10 @@ public final class ConvertToLowerCaseUnicodeAction implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ev) {
+        if (context.getPrimaryFile().isLocked()) {
+            DialogDisplayer.getDefault().notify(new NotifyDescriptor.Message(Bundle.ERROR_UnsavedChanges(), NotifyDescriptor.WARNING_MESSAGE));
+            return;
+        }
         new Converter().convertUnicodeCharacters(context.getPrimaryFile(), ConvertMode.LOWERCASE);
     }
 }
